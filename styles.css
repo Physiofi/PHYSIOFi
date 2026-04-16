@@ -1238,8 +1238,6 @@ body.is-booking-open .footer {
 /* ---------------------------------------------------------
    END OF MOBILE RULES - Desktop starts back up above here
    --------------------------------------------------------- */
-}
-}
 /* Update this block in your CSS */
 body.is-booking-open {
   overflow: hidden !important; /* Stops the scroll */

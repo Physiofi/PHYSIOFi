@@ -1187,54 +1187,56 @@ body.is-booking-open .footer {
   }
 }
 
+/* ---------------------------------------------------------
+   MOBILE ONLY - These rules are INVISIBLE to Desktop
+   --------------------------------------------------------- */
 @media screen and (max-width: 768px) {
-    /* 1. Reset everything to fit the screen width */
+    
+    /* 1. Shrink the logo ONLY on phones */
+    /* If your logo has a different class name, use that here */
+    header img, .logo img, .navbar-brand img {
+        max-width: 160px !important; 
+        height: auto !important;
+        margin: 0 auto !important;
+        display: block !important;
+    }
+
+    /* 2. Stack the Header elements */
+    header, .header-container {
+        flex-direction: column !important;
+        height: auto !important;
+        padding: 15px 0 !important;
+        text-align: center;
+    }
+
+    /* 3. Stop the horizontal "Wobble" and grey space */
     html, body {
         overflow-x: hidden !important;
         width: 100% !important;
-        margin: 0;
-        padding: 0;
+        position: relative;
     }
 
-    /* 2. Fix the Navbar/Header Alignment */
-    header, .header-container {
-        display: flex !important;
-        flex-direction: column !important; /* Stacks logo on top of icons */
-        align-items: center !important;
-        width: 100% !important;
-        padding: 15px 0 !important;
-        box-sizing: border-box;
-    }
-
-    /* Centers the phone/whatsapp/email icons */
-    .header-icons, .contact-info {
-        display: flex !important;
-        justify-content: center !important;
-        gap: 15px !important;
-        margin-top: 10px !important;
-        width: 100% !important;
-    }
-
-    /* 3. Fix the Edu Hub & Content Alignment */
-    .edu-hub-container, .content-section, .service-grid {
-        width: 92% !important; /* Leaves a small consistent gap on sides */
-        margin-left: auto !important;
-        margin-right: auto !important;
-        padding: 10px !important;
+    /* 4. Fix the "Edu Hub" and Content Alignment */
+    .container, .content-section, .edu-hub-container {
+        width: 90% !important; /* Centers it with clean side-margins */
+        margin: 0 auto !important;
         box-sizing: border-box !important;
-        text-align: center; /* Ensures text doesn't lean to one side */
     }
 
-    /* 4. Fix the Cards */
+    /* 5. Force the cards to stack neatly */
+    .service-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
     .card, .service-card {
         width: 100% !important;
-        margin-bottom: 20px !important;
+        max-width: 320px; /* Keeps cards from becoming too "stretched" */
     }
-
-    /* Ensures images stay inside their boxes */
-    img {
-        max-width: 100% !important;
-        height: auto !important;
-    }
+}
+/* ---------------------------------------------------------
+   END OF MOBILE RULES - Desktop starts back up above here
+   --------------------------------------------------------- */
 }
 }

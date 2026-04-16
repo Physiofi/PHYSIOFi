@@ -1240,3 +1240,20 @@ body.is-booking-open .footer {
    --------------------------------------------------------- */
 }
 }
+/* Update this block in your CSS */
+body.is-booking-open {
+  overflow: hidden !important; /* Stops the scroll */
+  touch-action: none;          /* Extra protection for mobile swiping */
+  -ms-touch-action: none;
+}
+
+/* Ensure your blur code still has the right background */
+body.is-booking-open .topbar,
+body.is-booking-open main,
+body.is-booking-open .footer {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+  /* Add this line below to make sure the background doesn't turn white */
+  background-color: inherit; 
+}

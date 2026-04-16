@@ -1187,8 +1187,54 @@ body.is-booking-open .footer {
   }
 }
 
-@media (max-width: 560px) {
-  .service-grid {
-    grid-template-columns: 1fr;
-  }
+@media screen and (max-width: 768px) {
+    /* 1. Reset everything to fit the screen width */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 2. Fix the Navbar/Header Alignment */
+    header, .header-container {
+        display: flex !important;
+        flex-direction: column !important; /* Stacks logo on top of icons */
+        align-items: center !important;
+        width: 100% !important;
+        padding: 15px 0 !important;
+        box-sizing: border-box;
+    }
+
+    /* Centers the phone/whatsapp/email icons */
+    .header-icons, .contact-info {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 15px !important;
+        margin-top: 10px !important;
+        width: 100% !important;
+    }
+
+    /* 3. Fix the Edu Hub & Content Alignment */
+    .edu-hub-container, .content-section, .service-grid {
+        width: 92% !important; /* Leaves a small consistent gap on sides */
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
+        text-align: center; /* Ensures text doesn't lean to one side */
+    }
+
+    /* 4. Fix the Cards */
+    .card, .service-card {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* Ensures images stay inside their boxes */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
 }

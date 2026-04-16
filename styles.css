@@ -1236,22 +1236,30 @@ body.is-booking-open .footer {
     }
 }
 /* ---------------------------------------------------------
-   END OF MOBILE RULES - Desktop starts back up above here
-   --------------------------------------------------------- */
-/* Update this block in your CSS */
+/* This targets the body ONLY when the modal is open */
 body.is-booking-open {
-  overflow: hidden !important; /* Stops the scroll */
-  touch-action: none;          /* Extra protection for mobile swiping */
-  -ms-touch-action: none;
+  /* 1. Stops Desktop/Laptop scrolling */
+  overflow: hidden !important; 
+
+  /* 2. Stops Mobile Touch scrolling */
+  touch-action: none !important; 
+  -webkit-overflow-scrolling: none;
+
+  /* 3. Fixes the "White Background" issue */
+  /* Ensures the body stays the full size of the screen and keeps its color */
+  height: 100vh !important;
+  width: 100% !important;
+  background-color: #0a192f !important; /* REPLACE with your site's dark color code */
 }
 
-/* Ensure your blur code still has the right background */
-body.is-booking-open .topbar,
-body.is-booking-open main,
-body.is-booking-open .footer {
-  filter: blur(5px);
-  pointer-events: none;
-  user-select: none;
-  /* Add this line below to make sure the background doesn't turn white */
-  background-color: inherit; 
+/* Ensure the Modal itself has a solid or semi-transparent background */
+#bookingModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 25, 47, 0.9); /* Dark background with slight transparency */
+  z-index: 1000;
+  overflow-y: auto; /* Allows the FORM to scroll if it's longer than the screen */
 }

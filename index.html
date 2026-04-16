@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHYSIOFi - Redefining Recovery</title>
+    <meta
+      name="description"
+      content="Single-page frontend site with quick contact and a support form."
+    />
+    <link rel="icon" type="image/jpeg" href="./image.jpg" />
+    <link rel="apple-touch-icon" href="./image.jpg" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar" id="top">
+      <div class="container topbar__inner">
+        <a class="brand" href="#top" aria-label="Homepage">
+          <img
+            class="brand__logo"
+            src="./logo.png"
+            alt="PHYSIOFi logo"
+            width="40"
+            height="40"
+          />
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="#about">About Us</a>
+          <a class="nav__link" href="#services">Services</a>
+          <a class="nav__link nav__link--edu" href="#edu-hub">
+            <img
+              class="nav__edu-icon"
+              src="./edu hub 2.png"
+              alt="PHYSIOFi EDU HUB"
+              width="18"
+              height="18"
+            />
+            <span>EDU HUB</span>
+          </a>
+        </nav>
+
+        <div class="quick" aria-label="Quick contact links">
+          <div class="phone-menu-wrap">
+            <a
+              class="icon-btn"
+              href="#"
+              id="callLink"
+              aria-label="Call us"
+              aria-haspopup="true"
+              aria-expanded="false"
+              title="Call"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2Z"
+                />
+              </svg>
+            </a>
+            <div class="phone-menu" id="navPhoneMenu" hidden></div>
+          </div>
+          <a
+            class="icon-btn"
+            href="#"
+            id="whatsAppLink"
+            aria-label="WhatsApp us"
+            title="WhatsApp"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12.04 2C6.53 2 2.07 6.47 2.07 12c0 1.77.46 3.5 1.33 5.03L2 22l5.12-1.35A9.9 9.9 0 0 0 12.04 22c5.51 0 9.96-4.47 9.96-10S17.55 2 12.04 2Zm0 18.2c-1.55 0-3.06-.41-4.39-1.18l-.32-.19-3.04.8.81-2.96-.21-.34A8.17 8.17 0 0 1 3.88 12c0-4.52 3.67-8.2 8.16-8.2 4.5 0 8.16 3.68 8.16 8.2s-3.66 8.2-8.16 8.2Zm4.76-6.17c-.26-.13-1.54-.76-1.78-.85-.24-.09-.41-.13-.58.13-.17.26-.67.85-.82 1.03-.15.17-.3.2-.56.07-.26-.13-1.09-.4-2.07-1.28-.77-.69-1.29-1.54-1.44-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.33-.02-.46-.06-.13-.58-1.39-.8-1.9-.21-.5-.43-.43-.58-.44h-.5c-.17 0-.46.07-.7.33-.24.26-.92.9-.92 2.2s.95 2.56 1.08 2.73c.13.17 1.86 2.85 4.5 3.99.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.07 1.54-.63 1.76-1.24.22-.61.22-1.13.15-1.24-.07-.11-.24-.17-.5-.3Z"
+              />
+            </svg>
+          </a>
+          <a
+            class="icon-btn"
+            href="#"
+            id="emailLink"
+            aria-label="Email us"
+            title="Email"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="about">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <div class="hero__stack">
+              <section
+                class="hero-block"
+                aria-labelledby="PHYSIOFi-means-title"
+              >
+                <div class="hero-split">
+                  <div class="hero-split__main">
+                    <h1 id="PHYSIOFi-means-title">What PHYSIOFi</h1>
+                    <p class="hero-title-balance">Means to You?</p>
+                    <p class="subhead">
+                      PHYSIOFi isn't just a name - it embodies my commitment to
+                      understanding each person as a whole, tailoring plans to
+                      individual needs and empowering my clients to move better,
+                      feel stronger and live more confidently everyday.
+                    </p>
+                    <div class="hero__actions">
+                      <a class="btn btn--primary" href="#" id="bookAppointmentBtn"
+                        >Book Appointment</a
+                      >
+                    </div>
+                  </div>
+
+                  <aside class="hero-split__aside" aria-label="Key highlights">
+                    <div class="hero-point">
+                      <h2 class="hero-point__title">Live 1-on-1 Sessions</h2>
+                      <p class="hero-point__text">
+                        We will guide you through your recovery journey. Online
+                        provide.
+                      </p>
+                    </div>
+                    <div class="hero-point">
+                      <h2 class="hero-point__title">Customized Plan</h2>
+                      <p class="hero-point__text">
+                        Tailored plans to individuals.
+                      </p>
+                    </div>
+                  </aside>
+                </div>
+              </section>
+
+              <section
+                class="hero-block"
+                aria-labelledby="how-it-works-title"
+              >
+                <h2 id="how-it-works-title">
+                  How it Works: Redefining Recovery.
+                </h2>
+                <div class="process" role="list">
+                  <div class="process__step" role="listitem">
+                    Book Consultation
+                  </div>
+                  <div class="process__step" role="listitem">
+                    Assessment Done
+                  </div>
+                  <div class="process__step" role="listitem">
+                    Live 1 on 1 Consultation
+                  </div>
+                  <div class="process__step" role="listitem">
+                    Progression Recording
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <form class="form hero__form hero__form--inline js-help-form" id="helpFormInline" novalidate>
+            <div class="field">
+              <label for="name-inline">Name</label>
+              <input
+                id="name-inline"
+                name="name"
+                type="text"
+                autocomplete="name"
+                placeholder="Your full name"
+                required
+                minlength="2"
+              />
+              <p class="field__error" data-error-for="name"></p>
+            </div>
+
+            <div class="field">
+              <label for="mobile-inline">Mobile number</label>
+              <input
+                id="mobile-inline"
+                name="mobile"
+                type="tel"
+                inputmode="tel"
+                autocomplete="tel"
+                placeholder="e.g. +91 98765 43210"
+                required
+              />
+              <p class="field__hint">Include country code if possible.</p>
+              <p class="field__error" data-error-for="mobile"></p>
+            </div>
+
+            <div class="field">
+              <label for="email-inline">Email</label>
+              <input
+                id="email-inline"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="you@example.com"
+                required
+              />
+              <p class="field__error" data-error-for="email"></p>
+            </div>
+
+            <div class="field">
+              <label for="problem-inline">Your problem</label>
+              <textarea
+                id="problem-inline"
+                name="problem"
+                rows="5"
+                placeholder="Describe your issue briefly"
+                required
+                minlength="10"
+              ></textarea>
+              <p class="field__error" data-error-for="problem"></p>
+            </div>
+
+            <div class="form__actions">
+              <button class="btn btn--primary" type="submit">Submit</button>
+              <button class="btn btn--ghost" type="reset">Clear</button>
+            </div>
+
+            <div class="toast" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="services">
+        <div class="container">
+          <h2>Services</h2>
+          <p class="lead">
+            Hover a box to view condition details and care focus.
+          </p>
+          <div class="service-grid" aria-label="Service categories">
+            <article class="service-card">
+              <div class="service-card__media">
+                <img src="./muscoskeletal.png" alt="Musculoskeletal care" />
+              </div>
+              <h3>Musculoskeletal</h3>
+              <p>Back and neck pain, slipped discs, osteoarthritis, rheumatoid arthritis, and chronic muscle strains.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card__media">
+                <img src="./Neurological.png" alt="Neurological care" />
+              </div>
+              <h3>Neurological</h3>
+              <p>Stroke rehabilitation, Parkinson's disease, Multiple Sclerosis, Spinal Cord Injury, and balance/coordination disorders.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card__media">
+                <img src="./Mental health.png" alt="Mental health care" />
+              </div>
+              <h3>Mental Health</h3>
+              <p>Therapeutic exercises for stress reduction, physical activity programs for depression/anxiety, and relaxation techniques.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card__media">
+                <img src="./pre-surgical.png" alt="Pre-surgical care" />
+              </div>
+              <h3>Pre-Surgical</h3>
+              <p>Conditioning and strengthening prior to elective surgeries to improve recovery outcomes (e.g., pre-ACL or pre-hip replacement).</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card__media">
+                <img src="./post surgical.png" alt="Post-surgical care" />
+              </div>
+              <h3>Post-Surgical</h3>
+              <p>Targeted rehabilitation following orthopedic, abdominal, or cardiac surgeries to restore mobility and reduce scar tissue.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card__media">
+                <img src="./Elderly care.png" alt="Elderly care" />
+              </div>
+              <h3>Elderly Care</h3>
+              <p>Fall prevention, mobility assistance, osteoporosis management, and age-related functional decline.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card__media">
+                <img src="./cardio respiratory.png" alt="Cardio-respiratory care" />
+              </div>
+              <h3>Cardio-Respiratory</h3>
+              <p>Post-COPD management, asthma physical therapy, post-heart attack recovery, and improving lung capacity.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card__media">
+                <img src="./antenatal care.png" alt="Antenatal care" />
+              </div>
+              <h3>Antenatal Care</h3>
+              <p>Pregnancy-related back pain, pelvic floor strengthening, and postural correction during pregnancy.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card__media">
+                <img src="./post-natal.png" alt="Post-natal care" />
+              </div>
+              <h3>Post-natal Care</h3>
+              <p>Diastasis recti recovery, pelvic floor rehabilitation, and safe return-to-exercise programs after childbirth.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card__media">
+                <img src="./joint replacement.png" alt="Joint replacement care" />
+              </div>
+              <h3>Joint Replacement</h3>
+              <p>Specialized protocols for Total Hip Replacement (THR), Total Knee Replacement (TKR), and Shoulder Arthroplasty.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card__media">
+                <img src="./women's health.png" alt="Women's health physiotherapy" />
+              </div>
+              <h3>Women's Health</h3>
+              <p>Pelvic organ prolapse, incontinence, pelvic pain, and menopause-related physical changes.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-card__media">
+                <img src="./sports injuries.png" alt="Sports injury physiotherapy" />
+              </div>
+              <h3>Sports Injuries</h3>
+              <p>Ligament tears (ACL/MCL), rotator cuff injuries, shin splints, tennis elbow, and athletic performance optimization.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--edu-hub" id="edu-hub">
+        <div class="container">
+          <img
+            class="edu-hub__symbol"
+            src="./edu hub.jpg"
+            alt="PHYSIOFi EDU HUB symbol"
+            width="96"
+            height="96"
+          />
+          <h2 class="edu-hub__title">
+            <img
+              class="edu-hub__title-logo"
+              src="./edu hub 2.png"
+              alt="PHYSIOFi EDU HUB logo"
+              width="28"
+              height="28"
+            />
+            <span>PHYSIOFi EDU HUB - An Educational Initiative by PHYSIOFi</span>
+          </h2>
+          <p class="lead">
+            PHYSIOFi EDU HUB is the dedicated educational wing of PHYSIOFi,
+            focused on enhancing the knowledge, skills, and career growth of
+            physiotherapy students and professionals.
+          </p>
+          <article class="panel edu-hub__panel">
+            <img
+              class="edu-hub__panel-image"
+              src="./PHYSIOFi  edu hub 3.jpeg"
+              alt="PHYSIOFi EDU HUB visual"
+              width="220"
+              height="180"
+              loading="lazy"
+            />
+            <div class="edu-hub__panel-content">
+              <h3>What PHYSIOFi EDU HUB Offers</h3>
+              <p>
+                It offers a range of learning opportunities including webinars,
+                workshops, and structured training programs that bridge the gap
+                between theoretical learning and real-world clinical practice.
+              </p>
+              <a
+                class="edu-hub__insta"
+                href="https://www.instagram.com/PHYSIOFi_edu_hub?igsh=ZTd3OWZod3J6ZGVw"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit PHYSIOFi EDU HUB on Instagram"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7Zm11.2 1.6a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2A2.8 2.8 0 1 0 12 14.8 2.8 2.8 0 0 0 12 9.2Z"
+                  />
+                </svg>
+                <span class="mono">PHYSIOFi_edu_hub</span>
+              </a>
+              <a
+                class="edu-hub__insta"
+                href="tel:+917034101880"
+                aria-label="Call EDU HUB at 7034101880"
+              >
+                <span class="mono">EDU HUB Contact: 7034101880</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="online-clinic">
+        <div class="container">
+          <h2>Get Expert Help at Our Online Service (Clinic)</h2>
+          <p class="lead">
+            PHYSIOFi online service connects you directly with certified medical
+            professionals through safe and secure online video sessions.
+          </p>
+          <p class="lead">
+            From guidance and injury care to post-treatment follow-ups,
+            everything happens digitally.
+          </p>
+          <ul class="online-clinic__points">
+            <li>
+              If you need offline service, we provide that too.
+            </li>
+            <li>
+              Get expert medical support anytime, anywhere, without visiting a
+              clinic in person.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container contact">
+          <div class="contact__copy">
+            <h2>Contact</h2>
+            <p class="lead">
+              Fill the form and we’ll reach out. Since this is frontend-only,
+              the form will show a confirmation message (no server submit).
+            </p>
+
+            <div class="contact-cards" aria-label="Direct contact">
+              <div class="contact-card" id="callCard">
+                <span class="contact-card__title">Phone</span>
+                <div class="phone-list" id="phoneList"></div>
+              </div>
+              <a class="contact-card" href="#" id="waCard">
+                <span class="contact-card__title">WhatsApp</span>
+                <span class="contact-card__value">Chat now</span>
+              </a>
+              <a class="contact-card" href="#" id="mailCard">
+                <span class="contact-card__title">Email</span>
+                <span class="contact-card__value mono" id="emailText"></span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__column">
+          <a href="#top" aria-label="Back to top">
+            <img
+              class="footer__logo"
+              src="./logo-transparent.png"
+              alt="PHYSIOFi logo"
+              width="240"
+              height="72"
+            />
+          </a>
+
+          <div class="footer__phone-list" id="footerPhoneList"></div>
+          <a class="footer__contact mono" href="#" id="footerEmailLink">
+            <span id="footerEmailText"></span>
+          </a>
+
+          <div class="footer__socials" aria-label="Social links">
+            <a
+              class="footer__social"
+              href="#"
+              id="footerYouTube"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit PHYSIOFi on YouTube"
+              title="YouTube"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M23.5 6.2a3.1 3.1 0 0 0-2.2-2.2C19.4 3.5 12 3.5 12 3.5s-7.4 0-9.3.5A3.1 3.1 0 0 0 .5 6.2 32 32 0 0 0 0 12a32 32 0 0 0 .5 5.8 3.1 3.1 0 0 0 2.2 2.2c1.9.5 9.3.5 9.3.5s7.4 0 9.3-.5a3.1 3.1 0 0 0 2.2-2.2A32 32 0 0 0 24 12a32 32 0 0 0-.5-5.8ZM9.6 15.5V8.5l6.2 3.5-6.2 3.5Z"
+                />
+              </svg>
+            </a>
+            <a
+              class="footer__social"
+              href="#"
+              id="footerFacebook"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit PHYSIOFi on Facebook"
+              title="Facebook"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.2-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H8v3.2h2.6V22h2.9Z"
+                />
+              </svg>
+            </a>
+            <a
+              class="footer__social"
+              href="#"
+              id="footerInstagram"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit PHYSIOFi on Instagram"
+              title="Instagram"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7Zm11.2 1.6a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2A2.8 2.8 0 1 0 12 14.8 2.8 2.8 0 0 0 12 9.2Z"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="footer__edu-hub">
+            <h4 class="footer__services-group">EDU HUB</h4>
+            <a
+              class="footer__contact footer__edu-link mono"
+              href="https://www.instagram.com/PHYSIOFi_edu_hub?igsh=ZTd3OWZod3J6ZGVw"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit PHYSIOFi EDU HUB Instagram"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7Zm11.2 1.6a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2A2.8 2.8 0 1 0 12 14.8 2.8 2.8 0 0 0 12 9.2Z"
+                />
+              </svg>
+              <span>PHYSIOFi_edu_hub</span>
+            </a>
+            <a
+              class="footer__contact footer__edu-link mono"
+              href="tel:+917034101880"
+              aria-label="Call EDU HUB at 7034101880"
+            >
+              <span>Contact: 7034101880</span>
+            </a>
+          </div>
+
+          <a class="footer__link footer__terms" href="./terms.html"
+            >Terms & Policies</a
+          >
+        </div>
+
+        <div class="footer__services" aria-label="Physiotherapy services">
+          <div class="footer__services-grid">
+            <div>
+              <h4 class="footer__services-group">Pain Management</h4>
+              <ul class="footer__services-list">
+                <li><span class="footer__term" data-term="Neck Pain">Neck Pain</span></li>
+                <li><span class="footer__term" data-term="Back Pain">Back Pain</span></li>
+                <li><span class="footer__term" data-term="Shoulder Pain">Shoulder Pain</span></li>
+                <li><span class="footer__term" data-term="Knee Pain">Knee Pain</span></li>
+                <li><span class="footer__term" data-term="Ankle Pain">Ankle Pain</span></li>
+                <li><span class="footer__term" data-term="Elbow Pain">Elbow Pain</span></li>
+              </ul>
+
+              <h4 class="footer__services-group">Other</h4>
+              <ul class="footer__services-list">
+                <li><span class="footer__term" data-term="Age-related problems">Age-related problems</span></li>
+                <li><span class="footer__term" data-term="Post-Surgical Rehabilitation">Post-Surgical Rehabilitation</span></li>
+                <li><span class="footer__term" data-term="Post Hip Replacement Surgery">Post Hip Replacement Surgery</span></li>
+                <li><span class="footer__term" data-term="Post Knee Replacement Surgery">Post Knee Replacement Surgery</span></li>
+                <li><span class="footer__term" data-term="Shoulder Rehabilitation">Shoulder Rehabilitation</span></li>
+                <li><span class="footer__term" data-term="ACL Reconstruction">ACL Reconstruction</span></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="footer__services-group">Spinal & Nerve Conditions</h4>
+              <ul class="footer__services-list">
+                <li><span class="footer__term" data-term="Spondylosis (Cervical & Lumbar)">Spondylosis (Cervical & Lumbar)</span></li>
+                <li><span class="footer__term" data-term="Sciatica">Sciatica</span></li>
+                <li><span class="footer__term" data-term="Disc Bulge">Disc Bulge</span></li>
+                <li><span class="footer__term" data-term="Kyphosis">Kyphosis</span></li>
+                <li><span class="footer__term" data-term="Scoliosis">Scoliosis</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="footer__muted footer__copyright">
+        © <span id="year"></span> PHYSIOFi
+      </p>
+    </footer>
+
+    <div
+      class="modal-overlay booking-modal-overlay"
+      id="bookingModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="bookingModalTitle"
+      hidden
+    >
+      <div class="booking-modal" role="document">
+        <div class="booking-modal__head">
+          <h2 id="bookingModalTitle">Book Appointment</h2>
+          <button
+            class="booking-modal__close"
+            type="button"
+            id="bookingModalClose"
+            aria-label="Close booking form"
+          >
+            ×
+          </button>
+        </div>
+
+        <form class="form hero__form js-help-form" id="helpFormModal" novalidate>
+          <div class="field">
+            <label for="name-modal">Name</label>
+            <input
+              id="name-modal"
+              name="name"
+              type="text"
+              autocomplete="name"
+              placeholder="Your full name"
+              required
+              minlength="2"
+            />
+            <p class="field__error" data-error-for="name"></p>
+          </div>
+
+          <div class="field">
+            <label for="mobile-modal">Mobile number</label>
+            <input
+              id="mobile-modal"
+              name="mobile"
+              type="tel"
+              inputmode="tel"
+              autocomplete="tel"
+              placeholder="e.g. +91 98765 43210"
+              required
+            />
+            <p class="field__hint">Include country code if possible.</p>
+            <p class="field__error" data-error-for="mobile"></p>
+          </div>
+
+          <div class="field">
+            <label for="email-modal">Email</label>
+            <input
+              id="email-modal"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+              required
+            />
+            <p class="field__error" data-error-for="email"></p>
+          </div>
+
+          <div class="field">
+            <label for="problem-modal">Your problem</label>
+            <textarea
+              id="problem-modal"
+              name="problem"
+              rows="5"
+              placeholder="Describe your issue briefly"
+              required
+              minlength="10"
+            ></textarea>
+            <p class="field__error" data-error-for="problem"></p>
+          </div>
+
+          <div class="form__actions">
+            <button class="btn btn--primary" type="submit">Submit</button>
+            <button class="btn btn--ghost" type="reset">Clear</button>
+          </div>
+
+          <div class="toast" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+
+    <div
+      class="modal-overlay"
+      id="clickwrapModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="clickwrapTitle"
+      aria-describedby="clickwrapText"
+      hidden
+    >
+      <div class="modal">
+        <h2 id="clickwrapTitle">Consent Required</h2>
+        <p class="lead" id="clickwrapText">
+          By clicking 'Submit' or 'Accept,' I expressly consent to be contacted
+          by the physiotherapy group via the phone number or email address
+          provided. I understand that this contact is for the purpose of
+          discussing my inquiry and finalizing a session booking. I acknowledge
+          that message and data rates may apply for SMS communications, and I
+          can opt-out of further communications at any time by notifying the
+          representative who contacts me.
+        </p>
+        <div class="modal__actions">
+          <button class="btn btn--ghost" type="button" id="clickwrapCancel">
+            Cancel
+          </button>
+          <button class="btn btn--primary" type="button" id="clickwrapAccept">
+            Accept
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+

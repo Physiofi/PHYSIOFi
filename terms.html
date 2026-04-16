@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhysioFi - Terms & Policies</title>
+    <meta
+      name="description"
+      content="Terms and policies for PhysioFi services and website usage."
+    />
+    <link rel="icon" type="image/png" href="./logo.png" />
+    <link rel="apple-touch-icon" href="./logo.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar" id="top">
+      <div class="container topbar__inner">
+        <a class="brand" href="./index.html#top" aria-label="Homepage">
+          <img
+            class="brand__logo"
+            src="./logo.png"
+            alt="PhysioFi logo"
+            width="40"
+            height="40"
+          />
+          <span class="brand__text">PhysioFi</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="./index.html#about">About Us</a>
+          <a class="nav__link" href="./index.html#services">Services</a>
+          <a class="nav__link nav__link--cta" href="./index.html#contact"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <p class="kicker">Legal Information</p>
+            <h1>Terms & Policies</h1>
+            <p class="subhead">
+              Please review our Terms of Service and Privacy Policy before using
+              this website or submitting a request form.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--ghost" href="./index.html">Back to Home</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt">
+        <div class="container">
+          <div class="panel">
+            <h2>1. Terms of Service</h2>
+            <p class="lead">Last Updated: April 2026</p>
+
+            <h3>1. Nature of Service</h3>
+            <p>
+              PhysioFi is a platform designed to facilitate communication
+              between users and physiotherapy professionals. We provide an
+              inquiry and booking request system; we do not provide medical
+              advice or immediate clinical services through this website.
+            </p>
+
+            <h3>2. No Doctor-Patient Relationship</h3>
+            <p>
+              The use of this website or the submission of a contact form does
+              not create a doctor-patient relationship. Such a relationship is
+              only established after a formal consultation and agreement with
+              the physiotherapy group.
+            </p>
+
+            <h3>3. Limitation of Liability</h3>
+            <p>
+              PhysioFi and its operators are not liable for any delays in
+              communication, missed appointments, or the quality of care
+              provided by the final practitioner. We act solely as a
+              coordination tool.
+            </p>
+
+            <h3>4. Emergency Disclaimer</h3>
+            <p>
+              DO NOT USE THIS SITE FOR MEDICAL EMERGENCIES. If you are
+              experiencing an emergency, please call your local emergency
+              services immediately.
+            </p>
+          </div>
+
+          <div class="panel" style="margin-top: 1rem">
+            <h2>2. Privacy Policy</h2>
+
+            <h3>1. Information We Collect</h3>
+            <p>When you use our booking request form, we collect:</p>
+            <p>Identity Data: Name.</p>
+            <p>Contact Data: Email address and phone number.</p>
+            <p>
+              Health-Related Data: A brief description of your physical concern
+              or "issue."
+            </p>
+
+            <h3>2. How We Use Your Data</h3>
+            <p>Your information is used exclusively to:</p>
+            <p>Identify your specific needs.</p>
+            <p>Allow our team to contact you to schedule a session.</p>
+            <p>Maintain a record of your request.</p>
+
+            <h3>3. Data Storage & Third Parties</h3>
+            <p>
+              As a frontend-focused site, we use third-party tools to process
+              form submissions. By submitting the form, you acknowledge that
+              your data may be processed by these providers in accordance with
+              their security standards. We do not sell or lease your personal
+              information to third parties.
+            </p>
+
+            <h3>4. Data Security</h3>
+            <p>
+              We take reasonable steps to ensure your data is handled securely.
+              However, no internet transmission is 100% secure. Users share
+              their health-related concerns at their own discretion.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__muted">
+          © <span id="year"></span> PhysioFi. All rights reserved.
+        </p>
+        <a class="footer__link" href="./index.html">Back to home</a>
+        <a class="footer__link" href="#top">Back to top</a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

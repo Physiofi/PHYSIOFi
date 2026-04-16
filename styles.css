@@ -1192,4 +1192,39 @@ body.is-booking-open .footer {
     grid-template-columns: 1fr;
   }
 }
+/* This finishes your existing service-grid rule and media query */
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+} 
 
+/* --- THE "NO-WOBBLE" ADDITION --- */
+/* This part ensures the site stays locked to the screen width */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Specific mobile fixes for Header and Cards */
+@media (max-width: 560px) {
+    header, .header-container {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .logo img {
+        max-width: 180px; /* Keeps the PhysioFi logo from being too big */
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    /* This makes sure those blue cards in image_b1d023.png don't push the screen wide */
+    .service-card, .card {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+}

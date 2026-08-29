@@ -24,6 +24,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -1525,6 +1526,23 @@ body.is-booking-open .footer {
   .nav {
     display: none;
   }
+  .topbar__inner {
+    min-height: 72px;
+    padding: 8px 0;
+    gap: 10px;
+  }
+  .brand__logo {
+    height: 50px;
+    max-width: 40vw;
+  }
+  .quick {
+    gap: 8px;
+    padding-left: 8px;
+  }
+  .icon-btn {
+    width: 36px;
+    height: 36px;
+  }
   .footer__inner {
     flex-direction: column;
   }
@@ -1547,8 +1565,37 @@ body.is-booking-open .footer {
   .service-grid {
     grid-template-columns: 1fr;
   }
-  /* This targets the body ONLY when the modal is open */
 
+  .topbar__inner {
+    min-height: 64px;
+    gap: 8px;
+  }
+
+  .brand__logo {
+    height: 44px;
+    max-width: 38vw;
+  }
+
+  .quick {
+    gap: 6px;
+    padding-left: 6px;
+    border-left: none;
+  }
+
+  .icon-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+  }
+
+  .icon-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .container {
+    width: min(var(--container), calc(100% - 24px));
+  }
 }
 /* Update this block in your CSS */
 body.is-booking-open {

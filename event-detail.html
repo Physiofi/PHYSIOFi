@@ -191,13 +191,13 @@
                   </div>
                   <div class="event-detail-item">
                     <div class="contact-links">
-                      <a href="tel:+919995330769" class="contact-btn call-btn" aria-label="Call +919995330769">
+                      <a href="tel:+919995330769" class="contact-btn call-btn" aria-label="Call +91 99953 30769">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
                           <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2Z" />
                         </svg>
                         Call
                       </a>
-                      <a href="https://wa.me/+919995330769" class="contact-btn whatsapp-btn" target="_blank" aria-label="WhatsApp +919995330769">
+                      <a href="https://wa.me/919995330769" class="contact-btn whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +91 99953 30769">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
                           <path d="M12.04 2C6.53 2 2.07 6.47 2.07 12c0 1.77.46 3.5 1.33 5.03L2 22l5.12-1.35A9.9 9.9 0 0 0 12.04 22c5.51 0 9.96-4.47 9.96-10S17.55 2 12.04 2Zm0 18.2c-1.55 0-3.06-.41-4.39-1.18l-.32-.19-3.04.8.81-2.96-.21-.34A8.17 8.17 0 0 1 3.88 12c0-4.52 3.67-8.2 8.16-8.2 4.5 0 8.16 3.68 8.16 8.2s-3.66 8.2-8.16 8.2Zm4.76-6.17c-.26-.13-1.54-.76-1.78-.85-.24-.09-.41-.13-.58.13-.17.26-.67.85-.82 1.03-.15.17-.3.2-.56.07-.26-.13-1.09-.4-2.07-1.28-.77-.69-1.29-1.54-1.44-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.33-.02-.46-.06-.13-.58-1.39-.8-1.9-.21-.5-.43-.43-.58-.44h-.5c-.17 0-.46.07-.7.33-.24.26-.92.9-.92 2.2s.95 2.56 1.08 2.73c.13.17 1.86 2.85 4.5 3.99.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.07 1.54-.63 1.76-1.24.22-.61.22-1.13.15-1.24-.07-.11-.24-.17-.5-.3Z" />
                         </svg>
@@ -272,6 +272,7 @@
       </article>
     </main>
 
+    <script src="./script.js"></script>
     <script>
       const posterData = {
         1: {
@@ -333,6 +334,22 @@
         const toggleArrow = moreDetailsToggle.querySelector('.toggle-arrow');
         const toggleLabel = moreDetailsToggle.querySelector('.toggle-label');
 
+        function expandMoreDetailsPanel({ scrollToDay6 = false } = {}) {
+          moreDetailsToggle.setAttribute('aria-expanded', 'true');
+          moreDetailsPanel.hidden = false;
+          toggleArrow.textContent = '←';
+          toggleLabel.textContent = 'Physioweek';
+
+          if (scrollToDay6) {
+            window.requestAnimationFrame(() => {
+              const day6Section = document.getElementById('day-6-section');
+              if (day6Section) {
+                day6Section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            });
+          }
+        }
+
         moreDetailsToggle.addEventListener('click', () => {
           const expanded = moreDetailsToggle.getAttribute('aria-expanded') === 'true';
           moreDetailsToggle.setAttribute('aria-expanded', String(!expanded));
@@ -344,6 +361,19 @@
           } else {
             toggleArrow.textContent = '←';
             toggleLabel.textContent = 'Physioweek';
+          }
+        });
+
+        const shouldOpenDay6 =
+          window.location.hash === '#day-6-section' || posterId === 3 || posterId === 4;
+
+        if (shouldOpenDay6) {
+          expandMoreDetailsPanel({ scrollToDay6: window.location.hash === '#day-6-section' });
+        }
+
+        window.addEventListener('hashchange', () => {
+          if (window.location.hash === '#day-6-section') {
+            expandMoreDetailsPanel({ scrollToDay6: true });
           }
         });
       }

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PHYSIOFi - Redefining Recovery</title>
     <meta
       name="description"
@@ -91,6 +91,62 @@
       </div>
     </header>
 
+    <section class="event-gallery" id="event-gallery" aria-label="Event gallery section">
+      <div class="page-shell page-shell--event">
+        <div class="event-brand-line" aria-label="PHYSIOWEEK by PHYSIOFi">
+          <span class="event-brand-word">PHYSIOWEEK</span>
+          <span class="event-brand-by">by <span class="event-brand-light">physiofi</span></span>
+        </div>
+
+        <div class="top-row top-row--event">
+          <section class="carousel-section" aria-label="Event posters carousel">
+            <div class="carousel" aria-live="polite">
+              <button class="carousel-btn prev" type="button" aria-label="Previous poster">❮</button>
+
+              <div class="slides">
+                <a class="slide active" href="./event-detail.html?poster=1" data-poster="1">
+                  <img src="./1.png" alt="Poster 1" />
+                </a>
+                <a class="slide" href="./event-detail.html?poster=2" data-poster="2">
+                  <img src="./2.png" alt="Poster 2" />
+                </a>
+                <a class="slide" href="./event-detail.html?poster=3#day-6-section" data-poster="3">
+                  <img src="./3.png" alt="Poster 3" />
+                </a>
+                <a class="slide" href="./event-detail.html?poster=4#day-6-section" data-poster="4">
+                  <img src="./4.png" alt="Poster 4" />
+                </a>
+                <a class="slide" href="./event-detail.html?poster=5" data-poster="5">
+                  <img src="./5.png" alt="Poster 5" />
+                </a>
+                <a class="slide" href="./event-detail.html?poster=6" data-poster="6">
+                  <img src="./6.png" alt="Poster 6" />
+                </a>
+              </div>
+
+              <button class="carousel-btn next" type="button" aria-label="Next poster">❯</button>
+            </div>
+
+            <div class="carousel-dots" aria-label="Carousel navigation">
+              <button class="carousel-dot active" type="button" data-index="0" aria-label="Go to poster 1"></button>
+              <button class="carousel-dot" type="button" data-index="1" aria-label="Go to poster 2"></button>
+              <button class="carousel-dot" type="button" data-index="2" aria-label="Go to poster 3"></button>
+              <button class="carousel-dot" type="button" data-index="3" aria-label="Go to poster 4"></button>
+              <button class="carousel-dot" type="button" data-index="4" aria-label="Go to poster 5"></button>
+              <button class="carousel-dot" type="button" data-index="5" aria-label="Go to poster 6"></button>
+            </div>
+          </section>
+
+          <aside class="side-poster" aria-label="Featured poster">
+            <button class="close-side-poster" type="button" aria-label="Close featured poster">×</button>
+            <a href="./event-detail.html?poster=1" class="side-poster-link">
+              <img src="./poster1-1.jpeg" alt="Featured poster" />
+            </a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
     <main id="main">
       <section class="hero" id="about">
         <div class="container hero__inner">
@@ -114,6 +170,7 @@
                       <a class="btn btn--primary" href="#" id="bookAppointmentBtn"
                         >Book Appointment</a
                       >
+                      <a class="btn btn--ghost" href="#about">Learn More</a>
                     </div>
                   </div>
 

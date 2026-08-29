@@ -260,6 +260,8 @@ body::before {
   box-shadow: none;
   transition: opacity 0.25s ease, transform 0.25s ease;
   z-index: 80;
+  pointer-events: auto;
+  touch-action: manipulation;
 }
 
 #event-gallery .side-poster.hidden {
@@ -325,8 +327,12 @@ body::before {
   }
 
   #event-gallery .side-poster {
+    position: fixed;
     right: 12px;
+    bottom: 14px;
     width: 128px;
+    margin: 0;
+    z-index: 80;
   }
 
   #event-gallery .side-poster-link img {
@@ -384,13 +390,24 @@ body::before {
   }
 
   #event-gallery .side-poster {
-    position: static;
-    width: min(42vw, 180px);
-    margin: 10px auto 0;
+    position: fixed;
+    right: 10px;
+    bottom: 12px;
+    width: 96px;
+    margin: 0;
+    z-index: 80;
   }
 
   #event-gallery .side-poster-link img {
-    height: 150px;
+    height: 128px;
+  }
+
+  #event-gallery .close-side-poster {
+    width: 24px;
+    height: 24px;
+    top: -6px;
+    right: -4px;
+    font-size: 0.85rem;
   }
 }
 

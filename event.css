@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: clip;
+}
+
 html, body {
   margin: 0;
   min-height: 100%;
@@ -474,6 +478,33 @@ a {
   fill: currentColor;
 }
 
+@media (max-width: 920px) {
+  .detail-content {
+    gap: 24px;
+  }
+
+  .topbar__inner {
+    min-height: 72px;
+    padding: 8px 0;
+    gap: 10px;
+  }
+
+  .brand__logo {
+    height: 50px;
+    max-width: 40vw;
+  }
+
+  .quick {
+    gap: 8px;
+    padding-left: 8px;
+  }
+
+  .icon-btn {
+    width: 36px;
+    height: 36px;
+  }
+}
+
 @media (max-width: 760px) {
   .detail-page {
     padding: 20px 14px 40px;
@@ -597,5 +628,63 @@ a {
     flex: none;
     justify-content: center;
     min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-page {
+    padding: 16px 12px 32px;
+  }
+
+  .detail-card {
+    min-height: auto;
+  }
+
+  .topbar__inner {
+    min-height: 64px;
+    gap: 8px;
+  }
+
+  .brand__logo {
+    height: 44px;
+    max-width: 38vw;
+  }
+
+  .quick {
+    gap: 6px;
+    padding-left: 6px;
+    border-left: none;
+  }
+
+  .icon-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+  }
+
+  .icon-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .week-summary {
+    padding: 14px 12px 10px;
+  }
+
+  .week-summary__title {
+    font-size: 1.05rem;
+  }
+
+  .day-card h4 {
+    font-size: 1.2rem;
+  }
+
+  .day-card h5 {
+    font-size: 1rem;
+  }
+
+  .social-footer {
+    margin-top: 24px;
+    padding-top: 20px;
   }
 }

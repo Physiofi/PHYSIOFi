@@ -55,6 +55,345 @@ body::before {
   z-index: 0;
 }
 
+#event-gallery {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  color: var(--text);
+  padding-top: 8px;
+  margin-top: 0;
+}
+
+#event-gallery .page-shell {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 12px 24px 12px;
+}
+
+#event-gallery .event-brand-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+#event-gallery .event-brand-word {
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #38e6a0;
+}
+
+#event-gallery .event-brand-by {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  text-transform: lowercase;
+  color: #ffffff;
+}
+
+#event-gallery .event-brand-light {
+  font-weight: 600;
+  text-transform: lowercase;
+  color: #ffffff;
+}
+
+#event-gallery .top-row {
+  position: relative;
+  width: 100%;
+  min-height: 390px;
+  margin-top: 0;
+}
+
+#event-gallery .carousel-section {
+  width: 70%;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+#event-gallery .carousel {
+  position: relative;
+  width: 70%;
+  height: 290px;
+  margin: 0 auto;
+  background: transparent;
+  border-radius: 20px;
+  overflow: visible;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#event-gallery .carousel:active {
+  cursor: grabbing;
+}
+
+#event-gallery .slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  touch-action: manipulation;
+}
+
+#event-gallery .slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 16px 30px rgba(18, 15, 29, 0.18);
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.7s ease, visibility 0.7s ease, filter 0.7s ease;
+  transform: translate(-50%, -50%) scale(0.84);
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#event-gallery .slide.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 3;
+}
+
+#event-gallery .slide.left-side {
+  left: 19%;
+  width: 82%;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0.75;
+  filter: saturate(0.8) brightness(0.8);
+  z-index: 2;
+}
+
+#event-gallery .slide.right-side {
+  left: 81%;
+  width: 82%;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0.75;
+  filter: saturate(0.8) brightness(0.8);
+  z-index: 2;
+}
+
+#event-gallery .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background: #f3f0ff;
+}
+
+#event-gallery .carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(18, 15, 29, 0.7);
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 10px 18px rgba(18, 15, 29, 0.18);
+}
+
+#event-gallery .carousel-btn:hover {
+  background: rgba(18, 15, 29, 0.88);
+  transform: translateY(-50%) scale(1.04);
+}
+
+#event-gallery .carousel-btn.prev {
+  left: 12px;
+}
+
+#event-gallery .carousel-btn.next {
+  right: 12px;
+}
+
+#event-gallery .carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+#event-gallery .carousel-dot {
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(109, 78, 234, 0.28);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#event-gallery .carousel-dot.active {
+  background: #6d4eea;
+  transform: scale(1.15);
+}
+
+#event-gallery .side-poster {
+  position: fixed;
+  right: 20px;
+  bottom: 18px;
+  top: auto;
+  width: 170px;
+  margin: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 80;
+}
+
+#event-gallery .side-poster.hidden {
+  display: none;
+}
+
+#event-gallery .close-side-poster {
+  position: absolute;
+  top: -8px;
+  right: -2px;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(15, 19, 31, 0.7);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#event-gallery .side-poster-link {
+  display: block;
+  overflow: visible;
+  border-radius: 0;
+  margin-top: 0;
+  background: transparent;
+}
+
+#event-gallery .side-poster-link img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  display: block;
+  background: transparent;
+}
+
+@media (max-width: 900px) {
+  #event-gallery .page-shell {
+    padding: 10px 14px 0;
+  }
+
+  #event-gallery .top-row {
+    min-height: 320px;
+  }
+
+  #event-gallery .carousel-section {
+    width: min(100%, 680px);
+  }
+
+  #event-gallery .carousel {
+    width: min(100%, 520px);
+    height: min(58vw, 330px);
+  }
+
+  #event-gallery .slide {
+    width: 88%;
+  }
+
+  #event-gallery .slide.left-side,
+  #event-gallery .slide.right-side {
+    width: 74%;
+  }
+
+  #event-gallery .side-poster {
+    right: 12px;
+    width: 128px;
+  }
+
+  #event-gallery .side-poster-link img {
+    height: 170px;
+  }
+}
+
+@media (max-width: 640px) {
+  #event-gallery .page-shell {
+    padding: 8px 10px 0;
+  }
+
+  #event-gallery .top-row {
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #event-gallery .carousel-section {
+    width: 100%;
+  }
+
+  #event-gallery .carousel {
+    width: 100%;
+    height: 240px;
+  }
+
+  #event-gallery .slide {
+    width: 92%;
+    border-radius: 12px;
+  }
+
+  #event-gallery .slide.left-side,
+  #event-gallery .slide.right-side {
+    width: 78%;
+  }
+
+  #event-gallery .carousel-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  #event-gallery .carousel-btn.prev {
+    left: 6px;
+  }
+
+  #event-gallery .carousel-btn.next {
+    right: 6px;
+  }
+
+  #event-gallery .carousel-dots {
+    margin-top: 10px;
+  }
+
+  #event-gallery .side-poster {
+    position: static;
+    width: min(42vw, 180px);
+    margin: 10px auto 0;
+  }
+
+  #event-gallery .side-poster-link img {
+    height: 150px;
+  }
+}
+
 .topbar,
 main,
 .footer {
@@ -1187,79 +1526,28 @@ body.is-booking-open .footer {
   }
 }
 
-/* ---------------------------------------------------------
-   MOBILE ONLY - These rules are INVISIBLE to Desktop
-   --------------------------------------------------------- */
-@media screen and (max-width: 768px) {
-    
-    /* 1. Shrink the logo ONLY on phones */
-    /* If your logo has a different class name, use that here */
-    header img, .logo img, .navbar-brand img {
-        max-width: 160px !important; 
-        height: auto !important;
-        margin: 0 auto !important;
-        display: block !important;
-    }
+@media (max-width: 560px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+  /* This targets the body ONLY when the modal is open */
 
-    /* 2. Stack the Header elements */
-    header, .header-container {
-        flex-direction: column !important;
-        height: auto !important;
-        padding: 15px 0 !important;
-        text-align: center;
-    }
-
-    /* 3. Stop the horizontal "Wobble" and grey space */
-    html, body {
-        overflow-x: hidden !important;
-        width: 100% !important;
-        position: relative;
-    }
-
-    /* 4. Fix the "Edu Hub" and Content Alignment */
-    .container, .content-section, .edu-hub-container {
-        width: 90% !important; /* Centers it with clean side-margins */
-        margin: 0 auto !important;
-        box-sizing: border-box !important;
-    }
-
-    /* 5. Force the cards to stack neatly */
-    .service-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    .card, .service-card {
-        width: 100% !important;
-        max-width: 320px; /* Keeps cards from becoming too "stretched" */
-    }
 }
-/* ---------------------------------------------------------
-/* This targets the body ONLY when the modal is open */
+/* Update this block in your CSS */
 body.is-booking-open {
-  /* 1. Stops Desktop/Laptop scrolling */
-  overflow: hidden !important; 
-
-  /* 2. Stops Mobile Touch scrolling */
-  touch-action: none !important; 
-  -webkit-overflow-scrolling: none;
-
-  /* 3. Fixes the "White Background" issue */
-  /* Ensures the body stays the full size of the screen and keeps its color */
-  height: 100vh !important;
-  width: 100% !important;
-  background-color: #0a192f !important; /* REPLACE with your site's dark color code */
+  overflow: hidden !important; /* Stops the scroll */
+  touch-action: none;          /* Extra protection for mobile swiping */
+  -ms-touch-action: none;
 }
 
-/* Ensure the Modal itself has a solid or semi-transparent background */
-#bookingModal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(10, 25, 47, 0.9); /* Dark background with slight transparency */
-  z-index: 1000;
-  overflow-y: auto; /* Allows the FORM to scroll if it's longer than the screen */
+/* Ensure your blur code still has the right background */
+body.is-booking-open .topbar,
+body.is-booking-open main,
+body.is-booking-open .footer {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+  /* Add this line below to make sure the background doesn't turn white */
+  background-color: inherit; 
 }
+

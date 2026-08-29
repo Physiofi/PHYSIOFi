@@ -622,11 +622,10 @@ if (eventGallerySlides.length && eventGalleryDots.length && eventCarousel) {
   const sidePosterLink = document.querySelector('#event-gallery .side-poster-link');
   if (sidePosterLink) {
     sidePosterLink.addEventListener('click', (event) => {
+      const href = sidePosterLink.getAttribute('href');
+      if (!href || href === '#') return;
       event.preventDefault();
-      const posterId = Number(sidePosterLink.getAttribute('href').match(/poster=(\d+)/)?.[1]);
-      if (posterId) {
-        window.location.href = `./event-detail.html?poster=${posterId}`;
-      }
+      window.location.href = href;
     });
   }
 
@@ -636,9 +635,9 @@ if (eventGallerySlides.length && eventGalleryDots.length && eventCarousel) {
     slide.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
-        const posterId = Number(slide.dataset.poster);
-        if (posterId) {
-          window.location.assign(`./event-detail.html?poster=${posterId}`);
+        const href = slide.getAttribute('href');
+        if (href) {
+          window.location.assign(href);
         }
       }
     });

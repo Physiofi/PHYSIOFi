@@ -1,7 +1,6 @@
 const CONTACT = {
-  phones: [
+  phones:
     { display: "+91 70341 01880", e164: "+917034101880" },
-  ],
   whatsappE164: "917034101880",
   email: "physiofi25@gmail.com",
 };

@@ -511,8 +511,6 @@ function initBookingModal() {
   });
 }
 
-
-
 initContactLinks();
 initNavPhoneMenu();
 initForm();
